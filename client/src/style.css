@@ -1,0 +1,185 @@
+/* styles.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap");
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* custom properties */
+:root {
+  --fs-h1: 3rem;
+
+  --todo-fs: 1.4rem;
+  --todo-status-fs: 1.8rem;
+  --todo-delete-fs: 1.6rem;
+
+  --clr-light: rgba(228, 215, 215, 0.1);
+  --clr-dark: rgba(255, 255, 255, 0.1);
+  --clr-accent: rgba(255, 255, 255, 0.1);
+  --clr-font: #e0d2d2;
+  --clr-cb: #e0d2d2;
+}
+
+/* APP */
+
+body {
+  background-color: #07000d;
+  background-image: url("https://www.transparenttextures.com/patterns/crossword.png");
+  color: var(--clr-font);
+  font-family: "Rubik", sans-serif;
+}
+
+/* container */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* todos list */
+
+.title {
+  text-align: center;
+  font-size: var(--fs-h1);
+  padding: 3rem 0 1rem;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+
+  background-color: var(--clr-dark);
+  width: 50%;
+  font-size: var(--todo-fs);
+  border-radius: 1rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+}
+
+.mutations {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.todo__status,
+.todo__delete {
+  border: none;
+  padding: 0;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+  color: var(--clr-cb);
+  font-size: var(--todo-delete-fs);
+
+  &:hover {
+    transform: scale(1.15);
+  }
+}
+
+.todo__status {
+  font-size: var(--todo-status-fs);
+}
+
+/* form */
+.form {
+  display: flex;
+  gap: 0.5rem;
+  width: 50%;
+  margin: 1rem auto;
+  font-size: var(--todo-fs);
+
+  /* flex-direction: column; */
+}
+
+.form__input {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.25rem;
+  border: none;
+  outline: none;
+  &:focus,
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+}
+
+.form__button {
+  border: none;
+  background-color: rgba(113, 0, 212, 0.7);
+  cursor: pointer;
+  color: var(--clr-font);
+  border-radius: 0.25rem;
+  transition: all 0.2s;
+
+  &:hover {
+    background-color: rgba(27, 0, 179, 0.5);
+  }
+}
+
+@media (max-width: 430px) {
+  :root {
+    --fs-h1: 2.5rem;
+
+    --todo-fs: 1.2rem;
+    --todo-status-fs: 1.5rem;
+    --todo-delete-fs: 1.3rem;
+  }
+  .form {
+    width: 90%;
+  }
+  .todo {
+    width: 90%;
+    --todo-fs: 1.2rem;
+  }
+}
