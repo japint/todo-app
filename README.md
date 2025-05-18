@@ -28,7 +28,6 @@ The APC Todo App allows users to create, read, update, and delete tasks. It feat
 ## Features
 
 - **Task Management**: Create, update, and delete tasks.
-- **User  Authentication**: Secure login and registration.
 - **Responsive Design**: Works on both desktop and mobile devices.
 - **Real-time Updates**: Changes are reflected in real-time.
 
