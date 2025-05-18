@@ -36,20 +36,22 @@ The APC Todo App allows users to create, read, update, and delete tasks. It feat
 To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/todo-app.git
 
-2. Navigate to the project directory:
+   git clone 
+   ```bash
+   https://github.com/japint/todo-app/tree/main
+
+3. Navigate to the project directory:
     ```bash
    cd todo-app
 
-3. Install dependencies:
+4. Install dependencies:
     ```bash
    npm install
     
-4. Create a .env file in the root directory and add your environment variables.
+5. Create a .env file in the root directory and add your environment variables.
 
-5. Start the application:
+6. Start the application:
     ```bash
    npm start
 
