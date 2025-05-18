@@ -37,13 +37,12 @@ To get a local copy of the project up and running, follow these steps:
 
 1. Clone the repository:
 
-   git clone 
    ```bash
-   https://github.com/japint/todo-app/tree/main
+   git clone https://github.com/japint/todo-app/tree/main
 
 3. Navigate to the project directory:
     ```bash
-   cd todo-app
+    1 cd todo-app
 
 4. Install dependencies:
     ```bash
